@@ -1,0 +1,10 @@
+{
+  "pattern":"console",
+  "filename":"/var/log/bmqtt.log",
+  "logLevel":"DEBUG",
+  "rotate":true,
+  "maxsize":256,
+  "maxdays":90,
+  "maxTotalSize":10240,
+  "daily": true
+}
