@@ -71,8 +71,8 @@ function build()
 function main()
 {
 
-    version=$1
-    [ -z ${version} ] && die $"Usage: $0 version [release|debug]"
+    version="1.0"
+#    [ -z ${version} ] && die $"Usage: $0 version [release|debug]"
 
     echo "build starting..."
 
@@ -87,7 +87,7 @@ function main()
     check || exit $?
 
     target=${MODULE_NAME}-${version}
-    buildtype=$2
+    buildtype="release"
     build ${target} ${buildtype}
     cd bin/
     ln -s ${target} ${MODULE_NAME}
